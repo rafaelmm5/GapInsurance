@@ -105,6 +105,7 @@ namespace GapInsurance
             {
                 Customer_Policies dbCustPolicy = null;
 
+                //TODO. change throw exceptions since this is not very testable.
                 if (custPolicy.CoverPercentage > 100)
                 {
                     throw new InvalidOperationException("Cover percentage can't be higher than 100%");
