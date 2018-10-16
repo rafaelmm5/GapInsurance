@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GapInsurance.Data", "GapIns
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GapInsurance.Models", "GapInsurance.Models\GapInsurance.Models.csproj", "{60E7C6F0-5E3D-4E7A-BAE1-EC747C1D17AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "Program\Program.csproj", "{5122A7BB-23AB-4731-AA31-D0D16E18CA6F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GapInsurance.Service", "GapInsurance.Service\GapInsurance.Service.csproj", "{64FF5D5E-ADB9-4190-9DC6-2F9877DEF72E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GapInsurance.Web", "GapInsurance.Web\GapInsurance.Web.csproj", "{9E736144-2DE4-45FF-A8D0-39441CC84005}"
@@ -33,10 +31,6 @@ Global
 		{60E7C6F0-5E3D-4E7A-BAE1-EC747C1D17AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60E7C6F0-5E3D-4E7A-BAE1-EC747C1D17AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60E7C6F0-5E3D-4E7A-BAE1-EC747C1D17AD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5122A7BB-23AB-4731-AA31-D0D16E18CA6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5122A7BB-23AB-4731-AA31-D0D16E18CA6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5122A7BB-23AB-4731-AA31-D0D16E18CA6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5122A7BB-23AB-4731-AA31-D0D16E18CA6F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{64FF5D5E-ADB9-4190-9DC6-2F9877DEF72E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{64FF5D5E-ADB9-4190-9DC6-2F9877DEF72E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64FF5D5E-ADB9-4190-9DC6-2F9877DEF72E}.Release|Any CPU.ActiveCfg = Release|Any CPU
