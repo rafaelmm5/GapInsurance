@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GapInsurance.Manager;
 using GapInsurance.Models;
 using AutoMapper;
 using GapInsurance.Data;

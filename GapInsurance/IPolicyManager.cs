@@ -13,6 +13,8 @@ namespace GapInsurance
         PoliciesDto GetPolicy(int id);
         IList<PoliciesDto> GetPolicies();
         bool DeletePolicy(int id);
+        IList<Customer_PoliciesDto> GetCustomerPolices();
+        Customer_PoliciesDto GetCustomerPolicy(int id);
         Customer_PoliciesDto SaveCustomerPolicy(Customer_PoliciesDto policy);
     }
 }

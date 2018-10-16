@@ -9,5 +9,8 @@ namespace GapInsurance
         IList<ClientsDto> GetClients();
         ClientsDto SaveClient(ClientsDto client);
         bool DeleteClient(int id);
+        CustomersDto SaveCustomer(CustomersDto customer);
+        IList<CustomersDto> GetCustomers();
+        CustomersDto GetCustomer(int id);
     }
 }

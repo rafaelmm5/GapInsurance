@@ -11,7 +11,6 @@ namespace GapInsurance.Data
         public Clients()
         {
             Customers = new HashSet<Customers>();
-            Users = new HashSet<Users>();
         }
 
         public int Id { get; set; }
@@ -22,6 +21,5 @@ namespace GapInsurance.Data
 
         public virtual ICollection<Customers> Customers { get; set; }
 
-        public virtual ICollection<Users> Users { get; set; }
     }
 }

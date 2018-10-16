@@ -8,12 +8,12 @@ using System.Web.Http;
 
 namespace GapInsurance.Service.Controllers
 {
-    [RoutePrefix("api/Client")]
-    public class ClientController : ApiController
+    [RoutePrefix("api/Customer")]
+    public class CustomerController : ApiController
     {
         private readonly IClientManager clientManager;
 
-        public ClientController(IClientManager clientManager)
+        public CustomerController(IClientManager clientManager)
         {
             this.clientManager = clientManager;
         }
@@ -22,33 +22,34 @@ namespace GapInsurance.Service.Controllers
         [Route("")]
         public IHttpActionResult Get()
         {
-            return Ok(clientManager.GetClients());
+            return Ok(clientManager.GetCustomers());
         }
 
         [Authorize]
         [Route("{id}")]
         public IHttpActionResult Get(int id)
         {
-            var client = clientManager.GetClient(id);
+            var customer = clientManager.GetCustomer(id);
 
-            if (client == null)
+            if (customer == null)
                 return NotFound();
 
-            return Ok(client);
+            return Ok(customer);
         }
 
         [Authorize]
         [Route("")]
-        public IHttpActionResult Post([FromBody]ClientsDto client)
+        public IHttpActionResult Post([FromBody]CustomersDto customer)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var updatedClient = clientManager.SaveClient(client);
+            var updatedCustomer = clientManager.SaveCustomer(customer);
 
-            return Ok(updatedClient);
+            return Ok(updatedCustomer);
         }
+
     }
 }

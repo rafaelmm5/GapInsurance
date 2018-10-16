@@ -6,7 +6,6 @@ namespace GapInsurance.Models
     {
         public PoliciesDto()
         {
-            Customer_Policies = new List<Customer_PoliciesDto>();
             Coverages = new List<CoveragesDto>();
         }
 
@@ -15,8 +14,6 @@ namespace GapInsurance.Models
         public string Name { get; set; }
 
         public string Description { get; set; }
-
-        public IList<Customer_PoliciesDto> Customer_Policies { get; set; }
 
         public IList<CoveragesDto> Coverages { get; set; }
     }

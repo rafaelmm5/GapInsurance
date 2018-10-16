@@ -25,7 +25,7 @@ namespace GapInsurance.Data
 
         public virtual Policies Policies { get; set; }
 
-        public string RiskType { get; set; }
+        public int RiskType { get; set; }
 
         public bool Active { get; set; }
 

@@ -4,7 +4,7 @@ using GapInsurance.Models;
 using GapInsurance.Data;
 using AutoMapper;
 
-namespace GapInsurance.Manager
+namespace GapInsurance
 {
     public class ClientManager : IClientManager
     {
@@ -116,6 +116,36 @@ namespace GapInsurance.Manager
 
                 return Mapper.Map<Customers, CustomersDto>(dbCustomer);
             }
+        }
+
+        public IList<CustomersDto> GetCustomers()
+        {
+            using (var db = new GapInsuranceDBModel())
+            {
+                var customers = db.Customers.ToList();
+
+                if (customers?.Any() == true)
+                {
+                    return customers.Select(x => Mapper.Map<Customers, CustomersDto>(x)).ToList();
+                }
+            }
+
+            return null;
+        }
+
+        public CustomersDto GetCustomer(int id)
+        {
+            using (var db = new GapInsuranceDBModel())
+            {
+                var customer = db.Customers.FirstOrDefault(x => x.Id == id);
+
+                if (customer != null)
+                {
+                    return Mapper.Map<Customers, CustomersDto>(customer);
+                }
+            }
+
+            return null;
         }
     }
 }

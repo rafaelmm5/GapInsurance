@@ -140,7 +140,7 @@ namespace GapInsurance
                 dbCustPolicy.StartDate = custPolicy.StartDate;
                 dbCustPolicy.EndDate = custPolicy.EndDate;
                 dbCustPolicy.Price = custPolicy.Price;
-                dbCustPolicy.RiskType = custPolicy.RiskType.ToString();
+                dbCustPolicy.RiskType = (int)custPolicy.RiskType;
                 dbCustPolicy.CustomerId = db.Customers.FirstOrDefault(x=> x.Id==custPolicy.CustomerId).Id;
                 dbCustPolicy.Active = custPolicy.Active;
                 dbCustPolicy.CoverPercentage = custPolicy.CoverPercentage;
@@ -149,6 +149,36 @@ namespace GapInsurance
 
                 return Mapper.Map<Customer_Policies, Customer_PoliciesDto>(dbCustPolicy);
             }
+        }
+
+        public IList<Customer_PoliciesDto> GetCustomerPolices()
+        {
+            using (var db = new GapInsuranceDBModel())
+            {
+                var policies = db.Customer_Policies.ToList();
+
+                if (policies?.Any() == true)
+                {
+                    return policies.Select(x => Mapper.Map<Customer_Policies, Customer_PoliciesDto>(x)).ToList();
+                }
+            }
+
+            return null;
+        }
+
+        public Customer_PoliciesDto GetCustomerPolicy(int id)
+        {
+            using (var db = new GapInsuranceDBModel())
+            {
+                var policy = db.Customer_Policies.FirstOrDefault(x => x.Id == id);
+
+                if (policy != null)
+                {
+                    return Mapper.Map<Customer_Policies, Customer_PoliciesDto>(policy);
+                }
+            }
+
+            return null;
         }
     }
 }
