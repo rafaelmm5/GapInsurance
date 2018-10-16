@@ -22,6 +22,47 @@ app.config(function ($routeProvider) {
         templateUrl: "/app/views/policies.html"
     });
 
+    $routeProvider.when("/policies/add", {
+        controller: "policiesController",
+        templateUrl: "/app/views/policy-edit.html"
+    });
+
+    $routeProvider.when("/policies/:id", {
+        controller: "policiesController",
+        templateUrl: "/app/views/policy-edit.html"
+    });
+
+    $routeProvider.when("/customers", {
+        controller: "customersController",
+        templateUrl: "/app/views/customers.html"
+    });
+
+    $routeProvider.when("/customers/add", {
+        controller: "customersController",
+        templateUrl: "/app/views/customers-edit.html"
+    });
+
+    $routeProvider.when("/customers/:id", {
+        controller: "customersController",
+        templateUrl: "/app/views/customers-edit.html"
+    });
+
+    
+    $routeProvider.when("/clients", {
+        controller: "clientsController",
+        templateUrl: "/app/views/clients.html"
+    });
+
+    $routeProvider.when("/clients/add", {
+        controller: "clientsController",
+        templateUrl: "/app/views/clients-edit.html"
+    });
+
+    $routeProvider.when("/clients/:id", {
+        controller: "clientsController",
+        templateUrl: "/app/views/clients-edit.html"
+    });
+
     $routeProvider.otherwise({ redirectTo: "/home" });
 });
 

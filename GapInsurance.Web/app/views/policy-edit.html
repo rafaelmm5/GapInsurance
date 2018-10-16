@@ -1,0 +1,59 @@
+
+<div class="row">
+        <div class="col-md-2">
+            &nbsp;
+        </div>
+        <div class="col-md-8">
+            <h4>{{addOrEdit}}</h4>
+            <form class="form">
+                    <div class="form-group">
+                            <label for="customerId">Customer</label>
+                            <select class="form-control" ng-model="policy.customerId" >
+                                <option ng-repeat="customer in customers" value="{{customer.id}}">{{customer.id + " - " + customer.firstName + " " + customer.lastName}}</option>
+                            </select>
+                    </div>
+                    <div class="form-group">
+                            <label for="policyId">Available policies</label>
+                            <select class="form-control" ng-model="policy.policyId" >
+                                <option ng-repeat="availablePolicy in availablePolicies" value="{{availablePolicy.id}}">{{availablePolicy.id + " - " + availablePolicy.name}}</option>
+                            </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="startDate">Start Date</label>
+                        <input type="text" class="form-control" id="startDate" placeholder="Start Date"  data-ng-model="policy.startDate" >
+                    </div>
+                    <div class="form-group">
+                        <label for="endDate">End Date</label>
+                        <input type="text" class="form-control" id="endDate" placeholder="endDate" data-ng-model="policy.endDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price</label> 
+                        <input type="number" class="form-control" id="price" placeholder="price" data-ng-model="policy.price">
+                    </div>
+                    <div class="form-group">
+                        <label for="coverPercentage">Cover Percentage</label>
+                        <input type="number" class="form-control" id="coverPercentage" placeholder="coverPercentage" data-ng-model="policy.coverPercentage">
+                    </div>
+                    <div class="form-group">
+                        <label for="riskType">Risk</label>
+                        <select class="form-control" ng-model="policy.riskType">
+                            <option value="0">High</option>
+                            <option value="1">MediumHigh</option>
+                            <option value="2">Medium</option>
+                            <option value="3">Low</option>
+                        </select>
+                        
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                                Active <input type="checkbox" data-ng-model="policy.active"> 
+                        </label>
+                    </div>
+                    <button ng-click="savePolicy()" class="btn btn-success">Save</button>
+                </form>
+        </div>
+    
+        <div class="col-md-2">
+            &nbsp;
+        </div>
+    </div>

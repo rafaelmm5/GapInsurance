@@ -1,0 +1,36 @@
+
+<div class="row">
+        <div class="col-md-2">
+            &nbsp;
+        </div>
+        <div class="col-md-8">
+            <h4>{{addOrEdit}}</h4>
+            <form class="form">
+                    <div class="form-group">
+                        <label for="id">Id</label>
+                        <input type="text" readonly class="form-control" id="id" placeholder="Id"  data-ng-model="customer.id" >
+                    </div>
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" required class="form-control" id="id" placeholder="FirstName"  data-ng-model="customer.firstName" >
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" required class="form-control" id="id" placeholder="LastName"  data-ng-model="customer.lastName" >
+                    </div>
+
+                    <div class="form-group">
+                            <label for="customerId">Client</label>
+                            <select class="form-control" ng-model="customer.clientId" >
+                                <option ng-repeat="client in clients" value="{{client.id}}">{{client.id + " - " + client.name}}</option>
+                            </select>
+                    </div>
+
+                    <button ng-click="saveCustomer()" class="btn btn-success">Save</button>
+                </form>
+        </div>
+    
+        <div class="col-md-2">
+            &nbsp;
+        </div>
+    </div>

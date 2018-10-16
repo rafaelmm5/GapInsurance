@@ -20,9 +20,10 @@
             <div class="navbar-collapse" ng-class="{collapse: isCollapsed}">
                 <ul class="nav navbar-nav navbar-right">
                     <li data-ng-hide="!authentication.isAuth"><a href="#">{{authentication.userName}}</a></li>
-                    <li data-ng-hide="!authentication.isAuth"><a href="#/policies">Customers</a></li>
+                    <li data-ng-hide="!authentication.isAuth"><a href="#/clients">Clients</a></li>
+                    <li data-ng-hide="!authentication.isAuth"><a href="#/customers">Customers</a></li>
+                    
                     <li data-ng-hide="!authentication.isAuth"><a href="#/policies">Policies</a></li>
-                    <li data-ng-hide="!authentication.isAuth"><a href="#/policies">Clients</a></li>
                     <li data-ng-hide="!authentication.isAuth"><a href="" data-ng-click="logOut()">Logout</a></li>
                     <li data-ng-hide="authentication.isAuth"> <a href="#/login">Login</a></li>
                     <li data-ng-hide="authentication.isAuth"> <a href="#/signup">Sign Up</a></li>
@@ -54,5 +55,7 @@
     <script src="app/controllers/loginController.js"></script>
     <script src="app/controllers/signupController.js"></script>
     <script src="app/controllers/policiesController.js?v=2"></script>
+    <script src="app/controllers/customersController.js?v=2"></script>
+    <script src="app/controllers/clientsController.js?v=2"></script>
 </body>
 </html>
